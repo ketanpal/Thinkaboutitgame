@@ -1,0 +1,173 @@
+
+html {
+    box-sizing: border-box;
+     /*1rem=10px*/
+    scroll-behavior: smooth;
+  }
+  
+body{
+    margin: 0;
+    width: 95%;
+    font-size: 25px;
+    font-weight: 400;
+    background-color:#FCE205;
+    background-size: cover;
+    
+    color:black;
+    align-items: center;
+position: fixed;
+}
+
+
+
+
+.main{
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+}
+button{
+  position: center;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.btn{
+    background-color:yellow;
+border-radius: 15px;
+  border: 5px solid black;
+    padding: 10px 20px;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+  text-decoration:none;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+position: relative;
+}
+.btn:hover{
+  background-color: white;
+  color: black;
+}
+
+.img{
+    width: 300px;
+    height: 200px;
+}
+
+.play-img{
+    width: 20vw;
+    height: 12vw;
+}
+header{
+    width: 102%;
+    height: 10vh;
+    display:flex;
+    flex-direction:row;
+ padding: 25px;
+    background: cover;
+}
+
+
+body {
+ position: relative;
+ 
+  perspective:150px;
+}
+.wrapper{
+    position:relative;
+    align-items: center;
+    font-size: 1.8vw;
+       font-family:serif;
+     
+}
+span::after{
+    content: '\a';
+    animation: animate infinite 52s;
+    white-space: pre;
+position: relative;
+}
+@keyframes animate{
+    5%{
+        content: 'Kumar is a daily wage labourer who had to move \a back to his village during the lockdown.';
+        
+    }
+    15%{
+        content: ' He lives with his wife Parvati and his two children \a 12 year old Roshan and 5 year old Kalpana.';
+        
+    }
+    
+    25%{
+        content: 'With the lockdown easing there’s now some hope \a for the family after 2 months of no income, \a Kumar and his wife have finally found work at a brick \a kiln near his village.';
+        
+    }
+    
+    45%{
+        content: 'But their daily wage has gone down from \a Rs. 300 per day to Rs. 150 per day \a Because of the losses, the owner of the \a factory had incurred during the lockdown.';
+        
+    }
+    
+    65%{
+        content: 'He cannot afford to pay them more which brings \a their total household income to Rs. 9000. \a However, their actual household expenses \a (diesel generator for electricity, kerosene for the \a chulha and food for the whole family).';
+        
+    }
+    85%{
+        content: 'Are Rs. 9500 – the bare minimum \a they need to survive. \a  Times are tough but they cannot afford \a to waste more time looking for another job. ';
+        
+    }
+    100%{
+        content: 'You are now in control of Kumar’s destiny and the fate of his family. \a\a Choose wisely';
+        
+    }
+    
+   
+}
+
+
+
+
+.play-img{
+  opacity: 0;
+  margin: 1 auto 0.25em auto;
+  transform: rotateX(10deg);
+  animation: fade-in-3d 5s cubic-bezier(.99,-0.33,.17,1.38) forwards;
+position:center;
+
+}
+
+
+/* Staggering the timings */
+.play-img:nth-child(1) { animation-delay: 45s; }
+.play-img:nth-child(2) { animation-delay: 45.2s; }
+.play-img:nth-child(3) { animation-delay: 45.3s; }
+.play-img:nth-child(4) { animation-delay: 45.4s; }
+.play-img:nth-child(5) { animation-delay: 45.5s; }
+.play-img:nth-child(6) { animation-delay: 45.6s; }
+.play-img:nth-child(7) { animation-delay: 45.7s; }
+.play-img:nth-child(8) { animation-delay: 45.8s; }
+
+
+@keyframes fade-in-3d {
+  0% {
+    opacity: 0;
+    transform: rotateX(1deg) translateY(-3em);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(1deg) translateY(0);
+  }
+}
+.fade-out{
+    animation: fadeOut 60s;
+    
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

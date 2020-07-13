@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+button{ border:1px solid yellow;  cursor:pointer; outline:none; margin-top:  150px}
+button#playpausebtn{
+    background:url(speaker.svg) no-repeat; 
+    width:30px;
+    height:30px;
+
+margin:1rem;
+}
+  #playpausebtn{
+            border: 1px solid black;
+        }
+
+.button{
+  position: center;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+          .btn{
+          color: black;
+        }
+      
+        p{
+          font-size: 25px;
+            color: black;
+        }
+.btn:hover{
+  background-color: white;
+  
+}
+header{
+    background-color: #FFD400;
+}
+    </style>
+    <meta charset="utf-8" />
+    <link rel="icon" href="http://covid.xrlabs.cloud/logos/Favicon%2032.png" />
+    <link rel="stylesheet" href="quest1.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="jquery.js">\x3C/script');
+    </script>
+
+    <title> Survive COVID</title>
+    <script>   
+var audio, playbtn, mutebtn, seek_bar;
+        
+function initAudioPlayer(){
+    audio = new Audio();
+    audio.src = "mirrors.mp3";
+    audio.loop = true;
+    audio.play();
+    // Set object references
+    playbtn = document.getElementById("playpausebtn");
+    //mutebtn = document.getElementById("mutebtn");
+    // Add Event Handling
+    playbtn.addEventListener("click",playPause);
+    //mutebtn.addEventListener("click", mute);
+    // Functions
+    function playPause(){
+        if(audio.paused){
+            audio.play();
+            playbtn.style.background = "url(speaker.svg) no-repeat";
+        } else {
+            audio.pause();
+            playbtn.style.background = "url(mute.svg) no-repeat";
+        }
+    }
+}
+
+
+window.addEventListener("load",initAudioPlayer);
+    </script>
+
+  </head>
+  <body>
+    <header>
+            <div class="container">
+                
+                <a href="https://www.cry.org/" title="CRY">
+                <img src="https://www.cry.org/wp-content/uploads/2017/08/logo.png" alt="CRY"></a>
+            </div>
+        </header>
+<div class="content">
+  <h1>You can change this story.<br>
+India already had over 33 million child labourers,<br> between the ages of 6 and 18 years – given the loss
+of livelihoods during the lockdown, <br>this number will rapidly rise as more underprivileged children <br>are
+forced to work and support their families.<br></h1>
+<br>
+ <center>
+     <br>
+<div class="button">
+    <a href="donate.html" class="btn"><p>KNOW MORE</p></a><a href="https://www.cry.org/protect-children-from-child-labour-acld/ " class="btn" ><p>DONATE NOW</p></a>
+    </div>
+    </center>
+    </div>
+      <div>
+                <button id="playpausebtn"></button>    
+      </div>
+           </body>
+</html>
+
